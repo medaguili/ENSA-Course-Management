@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="left-side">
+    <img src="https://www.ensa-maroc.com/wp-content/uploads/ENSA-FES-Logo.png" alt="USMBA Logo" class="logo">
+    <h1>Welcome to Course Platform</h1>
+    <p>Your one-stop solution for managing and accessing your courses, live classes, and academic progress.</p>
+  </div>
+  <div class="right-side">
+    <img src="https://www.usmba.ac.ma/~usmba2/wp-content/uploads/2016/06/logo_rectoratArabe_vectoris.png" alt="USMBA Logo" class="logo-above-card">
+    <mat-card class="login-card">
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="login()">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your email" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+/* Styles for the login page */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f51b5;
+  color: white;
+  padding: 20px;
+}
+
+.left-side h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.left-side p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.left-side .logo {
+  width: 300px; /* Adjusted width */
+  position: absolute; /* Position it absolutely within the left-side */
+  top: 20px; /* Adjust to make the logo higher */
+}
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative; /* Allows positioning of elements inside */
+}
+
+.logo-above-card {
+  width: 150px; /* Adjusted width */
+  margin-bottom: 10px; /* Space between logo and card */
+  position: absolute; /* Position it absolutely within the right-side */
+  top: 30px; /* Adjust to ensure logo is above the card */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 100px; /* Space between the logo and card */
+  position: relative; /* Ensure it’s positioned relative to the parent */
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #3f51b5;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+}
+
+.logo {
+  width: 300px; /* Adjusted from 150px to 100px */
+}

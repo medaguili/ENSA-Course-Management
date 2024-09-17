@@ -1,0 +1,28 @@
+<div class="sidenav" [ngClass]="isLeftSidebarCollapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+      <i class="fal fa-bars"></i>
+    </button>
+
+    <!-- Only show the logo-text and close button if the sidebar is not collapsed -->
+    <div *ngIf="!isLeftSidebarCollapsed" class="logo-text">App</div>
+    <button *ngIf="!isLeftSidebarCollapsed" class="btn-close" (click)="closeSidenav()">
+      <i class="fal fa-times close-icon"></i>
+    </button>
+  </div>
+
+  <div class="sidenav-nav">
+    <!-- Loop through sidebar items using *ngFor -->
+    <li class="sidenav-nav-item" *ngFor="let item of items; let i = index">
+      <a
+        class="sidenav-nav-link"
+        [routerLink]="item.routeLink"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i class="sidenav-link-icon" [class]="item.icon"></i>
+        <span *ngIf="!isLeftSidebarCollapsed" class="sidenav-link-text">{{ item.label }}</span>
+      </a>
+    </li>
+  </div>
+</div>
